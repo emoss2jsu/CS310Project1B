@@ -92,15 +92,12 @@ public class TicTacToeView extends JPanel implements ActionListener {
 		}
 	
 	if(!model.getResult().equals(TicTacToeModel.Result.NONE )){
-			resultLabel.setText(""+model.getResult());
+			resultLabel.setText(model.getResult().toString().toUpperCase());
 			for(int i = 0; i < model.getWidth(); i++){
 				for(int j = 0; j < model.getWidth(); j++){
 					squares[i][j].setEnabled(false);
 				}
 			}
-			if(model.getResult().equals(TicTacToeModel.Result.TIE)){
-		resultLabel.setText("Tie");
-	}
 		}
         
     }
